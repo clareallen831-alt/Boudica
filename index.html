@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#18251f" />
+  <meta name="description" content="Boudica — personal accountability, fitness and mental wellbeing." />
+  <title>Boudica</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <button class="brand" data-nav="today" aria-label="Go to Today">
+        <span class="brand-mark">B</span>
+        <span><strong>BOUDICA</strong><small>Build the life you want to wake up to.</small></span>
+      </button>
+      <button id="themeToggle" class="icon-button" aria-label="Toggle appearance">◐</button>
+    </header>
+
+    <main id="main" tabindex="-1"></main>
+
+    <button id="stuckButton" class="stuck-button">I'm stuck</button>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button data-nav="today" class="nav-item active"><span>●</span>Today</button>
+      <button data-nav="health" class="nav-item"><span>＋</span>Health</button>
+      <button data-nav="proof" class="nav-item"><span>◇</span>Proof</button>
+      <button data-nav="me" class="nav-item"><span>○</span>Me</button>
+    </nav>
+  </div>
+
+  <dialog id="modal" class="modal"><div id="modalContent"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
